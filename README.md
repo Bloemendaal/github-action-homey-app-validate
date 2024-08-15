@@ -11,8 +11,9 @@ The level of the validation. Possible values are `debug`, `publish` or `verified
 ## Example usage
 
 ```name: Validate Homey App
-
+name: Validate Homey App
 on:
+  workflow_dispatch:
   push:
   pull_request:
 
@@ -21,7 +22,7 @@ jobs:
       name: Validate Homey App
       runs-on: ubuntu-latest
       steps:
-        - uses: actions/checkout@v3
+        - uses: actions/checkout@v4
         - uses: athombv/github-action-homey-app-validate@master
           with:
             level: verified
