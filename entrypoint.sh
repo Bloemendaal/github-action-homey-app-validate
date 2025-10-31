@@ -4,4 +4,4 @@ set -e
 
 cd /github/workspace/
 
-npx homey app validate --level $1
+npx Bloemendaal/node-homey app validate --level $1
